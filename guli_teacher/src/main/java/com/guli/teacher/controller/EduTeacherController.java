@@ -23,7 +23,8 @@ import java.util.List;
  * @author huaan
  * @since 2019-08-30
  */
-@Api(description="讲师管理")
+//@Api(description="讲师管理")
+@Api(value = "讲师管理")
 @RestController
 @RequestMapping("/teacher")
 public class EduTeacherController {
@@ -37,7 +38,6 @@ public class EduTeacherController {
     @ApiOperation(value = "讲师列表查询")
     @GetMapping("list")
     public R list(){
-        int i = 1/0;
         List<EduTeacher> list = teacherService.list(null);
         return R.ok().data("items",list);
     }
